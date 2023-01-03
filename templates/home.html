@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel = "stylesheet" href = "/static/app.css">
+    <title> boggle game </title>
+</head>
+<body>
+    
+<h1 class = "text-center text-secondary">boggle game!</h1>
+
+    <section class = "board">
+
+
+
+        <h4>
+            time left: <span class = "timer text-danger"></span>
+        </h4>
+
+
+
+
+
+        <table class = "board-table">
+            <tbody>
+                {% for row in board %}
+                <tr class = "table-row">
+                    {% for letter in row %}
+                    <td class = "table-element"> {{letter}} </td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+   
+
+
+
+    <form  method = "POST" class = "form">
+        <input class = "word" type = "text" name = "word" placeholder="enter word">
+        <button class = "btn" type="submit">submit</button>
+    </form>
+
+
+
+
+
+    <ul class = "word-holder">
+        <li>{{message}}</li><!-- this is where the words will be added to the page when a user finds a word -->
+    </ul>
+
+    <p class = "message-holder">
+        {{message}}
+    </p>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+<script src = "https://cdnjs.cloudflare.com/ajax/libs/axios/1.1.3/axios.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+<script src = "static/app.js"></script>
+<script href = "static/app.js"> let game = new BoggleGame("board" , 60);
+</script>
+</html>

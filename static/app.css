@@ -1,0 +1,28 @@
+.board{
+    margin-top: 5rem;
+    margin-left: 31rem;
+}
+.table-element{
+    text-align: center;
+    border:1px solid rgb(168, 168, 168);
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+
+.btn{
+    height: 45px;
+    margin-top: -5px;
+    background-color: rgb(167, 167, 167);
+    color:white;
+}
+.word{
+    margin-left: -50px;
+    margin-top: 10px;
+    height: 45px;
+    border:solid rgb(209, 209, 209);
+    border-radius: 10px;
+}
+li{
+    list-style:none;
+}
